@@ -43,8 +43,22 @@ Examplo:
 
 ---
 
+## Instalar o cliente
+
+Instalar o cliente do prisma.
+
+`npm install @prisma/client`
+
+Gerar o schema e a versão que vai ser criado na base de dados.
+
+`npx prisma generate`
+
+Subir as alterações da versão do schema para a base de dados.
+
+`npx prisma db push`
+
 ## Configuração da máquina
 
 > **Sistema Operacional**: Microsoft Windows 11 Pro
 > **Prcessador**: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz, 1382 Mhz, 4 Core(s), 8 Logical Processor(s)
-> **Memória RAM**: 16,0 GB
+> **Memória RAM**: 16GB
