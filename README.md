@@ -15,13 +15,21 @@ Usando a imagem **[bitnami/mongodb](https://hub.docker.com/r/bitnami/mongodb)**.
 Comando pra criar o container.
 `docker run -d --name mongodb-prisma -e ALLOW_EMPTY_PASSWORD=yes -e MONGODB_EXTRA_FLAGS='--wiredTigerCacheSizeGB=2' -p 27210:27210 bitnami/mongodb:latest`
 
-__❌Não consegui realizer os teste__
+Novo comando criado pelo ChatGPT:
+``docker run -d --name meu_mongodb -e MONGO_INITDB_ROOT_USERNAME=simple-prisma -e MONGO_INITDB_ROOT_PASSWORD=qz2QAZ -p 27099:27017 bitnami/mongodb``
+
+docker run --name mongodb -e MONGODB_USERNAME=prisma -e MONGODB_PASSWORD=userpassword123 -e MONGODB_ROOT_PASSWORD=password123 -e MONGODB_DATABASE=simple-prisma -p 27018:27017 bitnami/mongodb:latest
+`
+
+Examplo connection string:
+`mongodb://root:password123@127.0.0.1:27018/?directConnection=true`
+`
 
 ### Atlas
 
 Utilizando o passo a passo da **[documentação oficial do mongo](https://www.mongodb.com/docs/atlas/cli/stable/atlas-cli-deploy-docker/#std-label-atlas-cli-deploy-docker)**.
 
-Rodando o container 
+Rodando o container
 `docker run -p 27777:27017 --privileged -it mongodb/atlas bash`
 
 Criando o arquivo de configuraçaõ dentro do container.
